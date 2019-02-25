@@ -1,68 +1,33 @@
-// Let's get some practice writing a few objects for a new group of interns at a small business.
-
-// ==== Challenge 1: Writing Objects ==== 
-// HR needs some information on the new interns put into a database.  Given an id, email, first name, and gender. Create an object for each person in the company list:
-
-// 1,mmelloy0@psu.edu,Mitzi,F
-// 2,kdiben1@tinypic.com,Kennan,M
-// 3,kmummery2@wikimedia.org,Keven,M
-// 4,gmartinson3@illinois.edu,Gannie,M
-// 5,adaine5@samsung.com,Antonietta,F
-
-// Example format of an intern object: 1,examples@you.edu,Example,F
-const example = {
-  "id": 0,
-  "name": "Example",
-  "email": "examples@you.edu",
-  "gender": "F"
+const parent = {
+  "name": "Susan",
+  "age": 70,
+  speak: "My name is Susan",
+  child: {
+    "name": "George",
+    "age": 50,
+    speak: "My name is George",
+    grandchild: {
+      "name": "Sam",
+      "age": 30,
+      speak: "My name is Sam"
+        }
+    }
 }
 
-// Write your intern objects here:
-const mit = {
-  "id": 1,
-  "name": "Mitzi",
-  "email": "mmelloy@psu.edu",
-  "gender": "F"
-}
+// Log the parent object's name
+console.log(parent.name);
 
-const ken = {
-  "id": 2,
-  "name": "Kennan",
-  "email": "kdiben1@tinypic.com",
-  "gender": "M"
-}
+// Log the child's age
+console.log(parent.child.age);
 
-const kev = {
-  "id": 3,
-  "name": "Keven",
-  "email": "kmummery2@wikimedia.org",
-  "gender": "M"
-}
+// Log the name and age of the grandchild
+console.log(parent.child.grandchild.age);
 
-const gan = {
-  "id": 4,
-  "name": "Gannie",
-  "email": "gmartinson3@illinois.edu",
-  "gender": "M"
-}
+// Have the parent speak
+console.log(parent.speak);
 
-const ant = {
-  "id": 5,
-  "name": "Antonietta",
-  "email": "adaine5@samsung.com",
-  "gender": "F"
-}
+// Have the child speak
+console.log(parent.child.speak);
 
-// ==== Challenge 2: Reading Object Data ==== 
-// Once your objects are created, log out the following requests from HR into the console:
-
-// Mitzi's name
-console.log(mit.name);
-// Kennan's ID
-console.log(ken.id);
-// Keven's email
-console.log(kev.email);
-// Gannie's name
-console.log(gan.name);
-// Antonietta's Gender
-console.log(ant.gender);
+// Have the grandchild speak
+console.log(parent.child.grandchild.speak);
